@@ -109,6 +109,13 @@ Button(ventanaPrincipal, text=')', command=lambda: obtenerOperacion(
 Button(ventanaPrincipal, text='=', command=lambda: calcular()).grid(
     row=5, column=4, sticky=W+E, columnspan=2)
 
+# trata de hacer resposive los botones
+filas = 5
+columnas = 5
+for i in range(filas):
+    ventanaPrincipal.grid_rowconfigure(i,  weight=1)
+for i in range(columnas):
+    ventanaPrincipal.grid_columnconfigure(i,  weight=1)
 
 # inicia la aplicación
 ventanaPrincipal.mainloop()
