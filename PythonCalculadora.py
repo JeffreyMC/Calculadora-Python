@@ -54,7 +54,7 @@ def calcular():
         resultado = eval(expresion)
         limpiarPantalla()
         display.insert(0, resultado)
-    except expression as identifier:
+    except:
         limpiarPantalla()
         display.insert(0, 'ERROR')
 
